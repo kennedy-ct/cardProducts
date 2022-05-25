@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet">
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://kit.fontawesome.com/6515c0e4a6.js"
+            crossorigin="anonymous"></script>
+        <title>Card</title>
+    </head>
+    <body>
+        <aside class="category-container">
+            <h2>Filtrar por:</h2>
+            <nav class="catergory-list">
+                <h3>Faixa de preço</h3>
+                <ul class="by-price">
+                    <input type="range" name="price-slide" class="price-slide"
+                        min="1000" max="20000" value="20000" step="100">
+                    <div class="price-range-container">
+                        <p>R$0,00</p>
+                        <p class="selected-price">R$20.000,00</p>
+                    </div>
+                </ul>
+                <h3>Marcas</h3>
+                <ul class="brand-list">
+                    <li class="category-item">
+                        <h4>Apple</h4>
+                        <input type="checkbox" name="apple" class="brands">
+                    </li>
+                    <li class="category-item">
+                        <h4>Asus</h4>
+                        <input type="checkbox" name="asus" class="brands">
+                    </li>
+                    <li class="category-item">
+                        <h4>LG</h4>
+                        <input type="checkbox" name="lg" class="brands">
+                    </li>
+                    <li class="category-item">
+                        <h4>Motorola</h4>
+                        <input type="checkbox" name="motorola" class="brands">
+                    </li>
+                    <li class="category-item">
+                        <h4>Samsung</h4>
+                        <input type="checkbox" name="samsung" class="brands">
+                    </li>
+                    <li class="category-item">
+                        <h4>Xiaomi</h4>
+                        <input type="checkbox" name="xiaomi" class="brands">
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="grid" id="grid-container">
+            <div class="card-add card">
+                <div class="image-input">
+                    <input type="file" class="image" accept="image/*">
+                    <img
+                        src="https://getstamped.co.uk/wp-content/uploads/WebsiteAssets/Placeholder.jpg"
+                        alt="">
+                </div>    
+                <input type="text" class="name" placeholder="Product Name">
+                <select class="brand" placeholder="Select a brand">
+                    <option value="" disabled selected>Select a brand</option>
+                    <option value="apple">Apple</option>
+                    <option value="asus">Asus</option>
+                    <option value="lg">LG</option>
+                    <option value="motorola">Motorola</option>
+                    <option value="samsung">Samsung</option>
+                    <option value="xiaomi">Xiaomi</option>
+                    <input type="text" class="price" placeholder="Product Price">
+                    <button class="add">ADICIONAR PRODUTO</button>
+            </div>
+        </main>
+        <script type="module" src="app.js"></script>
+    </body>
+</html>
